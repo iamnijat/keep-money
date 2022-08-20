@@ -6,14 +6,17 @@ class RouterServiceImpl implements RouterService {
       Navigator.pushReplacementNamed(context, Routes.splashPage);
 
   @override
-  void openIntroPage(BuildContext context, {bool withRemoval = false}) =>
-      withRemoval
-          ? Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => const IntroPage()),
-              (Route<dynamic> route) => false,
-            )
-          : Navigator.pushReplacementNamed(context, Routes.introPage);
+  void openIntroPage(BuildContext context, {bool withRemoval = false}) {
+    if (withRemoval) {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const IntroPage()),
+        (Route<dynamic> route) => false,
+      );
+    } else {
+      Navigator.pushReplacementNamed(context, Routes.introPage);
+    }
+  }
 
   @override
   void openPersonalInformationPage(BuildContext context) =>

@@ -5,7 +5,7 @@ class ShimmerLoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return shimmer(
+    return mainGreyShimmer(
         context,
         ListView.builder(
             itemCount: 8,

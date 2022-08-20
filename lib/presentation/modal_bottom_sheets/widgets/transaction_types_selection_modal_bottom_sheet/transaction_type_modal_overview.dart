@@ -13,7 +13,7 @@ class TransactionTypeModalOverview extends StatelessWidget {
           removeTop: true,
           removeBottom: true,
           child: ListView.builder(
-              itemCount: _cubit.types.length,
+              itemCount: _cubit.types?.length,
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return Padding(

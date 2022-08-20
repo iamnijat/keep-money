@@ -1,17 +1,16 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import 'network_service.dart';
 
 class NetworkServiceImpl implements NetworkService {
-  final Connectivity connectivity;
+  final InternetConnectionChecker connectivity;
 
   NetworkServiceImpl(this.connectivity);
 
   @override
   Future<bool> get isConnected async {
-    final connectivityResult = await connectivity.checkConnectivity();
+    final connectivityResult = await InternetConnectionChecker().hasConnection;
 
-    return connectivityResult == ConnectivityResult.mobile ||
-        connectivityResult == ConnectivityResult.wifi;
+    return connectivityResult == true;
   }
 }

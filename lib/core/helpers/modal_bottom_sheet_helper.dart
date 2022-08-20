@@ -7,7 +7,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../constants/palette.dart';
 import '../constants/styles.dart';
 
-Future showPersonalInfoModalBottomSheet(
+void showPersonalInfoModalBottomSheet(
     context, AppLocalizations localization) async {
   return showMaterialModalBottomSheet(
     backgroundColor: AppPalette.whiteColor,
@@ -19,7 +19,7 @@ Future showPersonalInfoModalBottomSheet(
   );
 }
 
-Future showPersonalInfoEditModalBottomSheet(
+void showPersonalInfoEditModalBottomSheet(
     context, AppLocalizations localization,
     {required UserViewModel? user}) async {
   return showMaterialModalBottomSheet(

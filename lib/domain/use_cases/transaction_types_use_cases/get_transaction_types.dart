@@ -7,13 +7,13 @@ import '../../../data/models/view_model/transaction_type_view_model/transaction_
 import '../../repositories/transaction_types_repository.dart';
 
 class GetTransactionTypes extends UseCase<
-    Future<Either<Failure, List<TransactionTypeViewModel>>>, Params> {
+    Future<Either<Failure, List<TransactionTypeViewModel>?>>, Params> {
   GetTransactionTypes(this._repository);
 
   final TransactionTypesRepository _repository;
 
   @override
-  Future<Either<Failure, List<TransactionTypeViewModel>>> call(
+  Future<Either<Failure, List<TransactionTypeViewModel>?>> call(
       Params params) async {
     return await _repository.fetchTransactionTypes(params.query,
         variables: params.variables);

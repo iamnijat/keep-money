@@ -43,6 +43,7 @@ class AddTransactionModalDateField extends StatelessWidget {
 
   void _showDatePicker(BuildContext context) {
     showCupertinoDatePicker(context,
+        text: 'Done',
         child: DatePicker(_cubit.updateDate),
         onClicked: () => _cubit.back(context));
   }

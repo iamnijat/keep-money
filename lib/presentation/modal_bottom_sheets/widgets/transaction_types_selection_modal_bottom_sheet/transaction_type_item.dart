@@ -16,7 +16,7 @@ class _TransactionTypeItemState extends State<TransactionTypeItem> {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () => widget._cubit
-          .selectType(widget._cubit.types[widget._index], context, mounted),
+          .selectType(widget._cubit.types![widget._index], context, mounted),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

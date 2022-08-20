@@ -1,32 +1,20 @@
 part of shared_preferences_service;
 
 class SharedPreferencesServiceImpl implements SharedPreferencesService {
-  late SharedPreferences _sp;
+  SharedPreferencesServiceImpl(this.preferences);
+
+  final SharedPreferences preferences;
 
   /// Static Variables
   static const _userId = 'user_id';
 
   @override
-  Future<SharedPreferences?> init() async {
-    _sp = await SharedPreferences.getInstance();
-    return _sp;
-  }
+  Future<String?> get userId async => preferences.getString(_userId);
 
   @override
-  Future<String?> get userId async {
-    final shared = await init();
-    return shared?.getString(_userId);
-  }
+  Future<void> setUserId(String value) async =>
+      await preferences.setString(_userId, value);
 
   @override
-  Future<void> setUserId(String value) async {
-    final shared = await init();
-    await shared?.setString(_userId, value);
-  }
-
-  @override
-  Future<void> clear() async {
-    final shared = await init();
-    await shared?.clear();
-  }
+  Future<void> clear() async => await preferences.clear();
 }

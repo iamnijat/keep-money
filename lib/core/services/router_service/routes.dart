@@ -20,7 +20,6 @@ abstract class Routes {
         return MaterialPageRoute(builder: (_) => const PersonalInfoPage());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
-
       default:
         return MaterialPageRoute(builder: (_) => const SplashPage());
     }

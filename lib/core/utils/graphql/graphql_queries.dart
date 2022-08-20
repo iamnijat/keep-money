@@ -9,7 +9,6 @@ categories {
   type
 }
 }
-
 """;
 
   static String transactionsQuery = """
@@ -28,7 +27,6 @@ query user(\$id: String){
       created_at
       userId
     }
-    
   }
 }
 """;

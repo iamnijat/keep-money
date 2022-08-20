@@ -1,3 +1,5 @@
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+
 import 'core/constants/strings.dart';
 import 'core/services/network_service/network_service.dart';
 import 'core/services/network_service/network_service_impl.dart';
@@ -93,9 +95,10 @@ void _setupBlocs() {
 //* Services
 void _setupServices() {
   getIt.registerLazySingleton<SharedPreferencesService>(
-      () => SharedPreferencesServiceImpl());
+      () => SharedPreferencesServiceImpl(getIt()));
   getIt.registerLazySingleton<HiveService>(() => HiveServiceImpl());
-  getIt.registerLazySingleton<GraphqlService>(() => GraphqlServiceImpl());
+  getIt
+      .registerLazySingleton<GraphqlService>(() => GraphqlServiceImpl(getIt()));
 }
 
 //* Data Sources
@@ -186,6 +189,8 @@ Future<void> setupExternals() async {
   getIt.registerLazySingleton(() => prefs);
 
   getIt.registerLazySingleton(() => Connectivity());
+
+  getIt.registerLazySingleton(() => InternetConnectionChecker());
 
   getIt.registerLazySingleton(() =>
       GraphQLClient(link: HttpLink(AppStrings.apiHost), cache: GraphQLCache()));

@@ -47,11 +47,6 @@ class HomePageCubit extends Cubit<HomePageState> {
     }
   }
 
-  void removeTransactionFromList(String? id) async {
-    int? index = transactions.indexWhere((element) => element.id == id);
-    transactions.removeAt(index);
-  }
-
   void _emitSuccessState() {
     if (transactions.isEmpty) {
       _emittingState(HomePageState.empty);

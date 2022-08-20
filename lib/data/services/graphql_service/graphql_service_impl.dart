@@ -1,12 +1,9 @@
 part of graphql_service;
 
 class GraphqlServiceImpl implements GraphqlService {
-  late GraphQLClient _client;
-  GraphqlServiceImpl() {
-    HttpLink link = HttpLink(AppStrings.apiHost);
+  GraphqlServiceImpl(this.client);
 
-    _client = GraphQLClient(link: link, cache: GraphQLCache());
-  }
+  final GraphQLClient client;
 
   @override
   Future<QueryResult<Object?>> performMutation(String query,
@@ -16,7 +13,7 @@ class GraphqlServiceImpl implements GraphqlService {
         variables: variables!,
         fetchPolicy: FetchPolicy.noCache);
 
-    final result = await _client.mutate(options);
+    final result = await client.mutate(options);
 
     return result;
   }
@@ -31,7 +28,7 @@ class GraphqlServiceImpl implements GraphqlService {
             variables: variables)
         : QueryOptions(document: gql(query), fetchPolicy: FetchPolicy.noCache);
 
-    final result = await _client.query(options);
+    final result = await client.query(options);
 
     return result;
   }

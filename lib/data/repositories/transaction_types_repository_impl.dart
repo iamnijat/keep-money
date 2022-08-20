@@ -21,9 +21,9 @@ class TransactionTypesRepositoryImpl implements TransactionTypesRepository {
   });
 
   @override
-  Future<Either<Failure, List<TransactionTypeViewModel>>> fetchTransactionTypes(
-      String query,
-      {Map<String, dynamic>? variables}) async {
+  Future<Either<Failure, List<TransactionTypeViewModel>?>>
+      fetchTransactionTypes(String query,
+          {Map<String, dynamic>? variables}) async {
     if (await networkService.isConnected) {
       try {
         final result = await remoteDataSource.fetchTransactionTypes(query,

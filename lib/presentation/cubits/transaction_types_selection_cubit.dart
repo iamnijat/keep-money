@@ -1,4 +1,3 @@
-import '../../core/utils/date_format_util.dart';
 import '../../core/utils/graphql/graphql_queries.dart';
 import '../../data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
 import '../../domain/use_cases/transaction_types_use_cases/get_transaction_types.dart';
@@ -25,7 +24,7 @@ class TransactionTypesSelectionCubit
   /// RxDart Stream Controllers
   final _typesSelectionController = BehaviorSubject<TransactionTypeViewModel>();
 
-  List<TransactionTypeViewModel> types = <TransactionTypeViewModel>[];
+  List<TransactionTypeViewModel>? types = <TransactionTypeViewModel>[];
 
   Future<void> fetchTypes() async {
     _emittingState(TransactionTypesSelectionState.loading);
@@ -43,10 +42,10 @@ class TransactionTypesSelectionCubit
   }
 
   void _emitSuccessState() {
-    if (types.isEmpty) {
+    if (types!.isEmpty) {
       _emittingState(TransactionTypesSelectionState.error);
     }
-    if (types.isNotEmpty) {
+    if (types!.isNotEmpty) {
       _emittingState(TransactionTypesSelectionState.done);
       Fimber.d('Successfully fetched transaction types');
     }
@@ -89,17 +88,10 @@ extension TransactionTypesSelectionCubitTypeSelectionControllerRxExtension
       _typesSelectionController.stream;
 }
 
-/// Current Date
-extension TransactionTypesSelectionCubitCurrentDateExtension
-    on TransactionTypesSelectionCubit {
-  String get currentDate =>
-      DateFormatUtil.europeFormattedDate(DateFormatUtil.currentTime);
-}
-
 ///  Fields Extension
 extension TransactionTypesSelectionCubitFieldsExtension
     on TransactionTypesSelectionCubit {
-  String transactionTitle(int i) => types[i].title.toString();
+  String transactionTitle(int i) => types![i].title.toString();
 
-  String transactionType(int i) => types[i].type.toString();
+  String transactionType(int i) => types![i].type.toString();
 }

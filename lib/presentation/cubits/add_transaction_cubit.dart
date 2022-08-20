@@ -45,7 +45,7 @@ class AddTransactionCubit extends Cubit<AddTransactionState> {
       _typeController.add(typeModel);
 
   void updateDate(DateTime date) =>
-      _dateTimeController.add(_europeFormattedDate(date));
+      _dateTimeController.add(_monnthNameDayYearFormattedDate(date));
 
   void insertNumberToAmount(String value) =>
       _amountController.add("$amountValue$value");
@@ -128,7 +128,7 @@ extension AddTransactionCubitFormValidationControllerRxExtension
 
 /// Current Date
 extension AddTransactionCubitFormattedDateExtension on AddTransactionCubit {
-  String _europeFormattedDate(DateTime date) =>
+  String _monnthNameDayYearFormattedDate(DateTime date) =>
       DateFormatUtil.monnthNameDayYearFormattedDate(date);
 }
 
