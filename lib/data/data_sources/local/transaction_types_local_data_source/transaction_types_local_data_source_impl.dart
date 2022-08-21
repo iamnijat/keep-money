@@ -1,5 +1,5 @@
 import '../../../../core/error/exceptions.dart';
-import '../../../models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
+import '../../../models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 import '../../../services/hive_service/index.dart';
 import 'transaction_types_local_data_source.dart';
 
@@ -17,7 +17,7 @@ class TransactionTypesLocalDataSourceImpl
       await _hive.cacheTransactionTypes(cachedTransactionTypes, value);
 
   @override
-  fetchTransactionTypes() {
+  dynamic fetchTransactionTypes() {
     if (isTransactionTypesCached(cachedTransactionTypes)) {
       return _hive.fetchCachedTransactionTypes(cachedTransactionTypes);
     } else {

@@ -1,5 +1,5 @@
 import '../../core/utils/graphql/graphql_queries.dart';
-import '../../data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
+import '../../data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 import '../../domain/use_cases/transaction_types_use_cases/get_transaction_types.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';

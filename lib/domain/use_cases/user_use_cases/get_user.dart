@@ -1,4 +1,4 @@
-import '../../../data/models/view_model/user_view_model/user_view_model.dart';
+import '../../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../repositories/user_repository.dart';
 
 import '../../../core/use_cases/use_case.dart';

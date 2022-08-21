@@ -1,4 +1,4 @@
-import '../../../models/view_model/user_view_model/user_view_model.dart';
+import '../../../models/hive_adapters/user_view_model/user_view_model.dart';
 
 import '../../../../core/error/exceptions.dart';
 import '../../../services/hive_service/index.dart';

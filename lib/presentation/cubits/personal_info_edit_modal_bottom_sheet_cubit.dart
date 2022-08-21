@@ -2,7 +2,7 @@ import 'dart:async';
 
 import '../../core/utils/genders_util.dart';
 import '../../core/utils/graphql/graphql_queries.dart';
-import '../../data/models/view_model/user_view_model/user_view_model.dart';
+import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../domain/use_cases/user_use_cases/update_user.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';

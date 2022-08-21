@@ -3,7 +3,7 @@ library widgets;
 import 'package:animate_do/animate_do.dart';
 import 'package:keep_money/core/extensions/string_extensions.dart';
 import 'package:keep_money/core/utils/date_format_util.dart';
-import 'package:keep_money/data/models/view_model/user_view_model/user_view_model.dart';
+import 'package:keep_money/data/models/hive_adapters/user_view_model/user_view_model.dart';
 import 'package:keep_money/presentation/cubits/home_page_cubit.dart';
 import 'package:keep_money/presentation/cubits/intro_page_cubit.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +18,7 @@ import '../../core/constants/palette.dart';
 import '../../core/constants/styles.dart';
 import '../../core/helpers/modal_bottom_sheet_helper.dart';
 import '../../core/helpers/shimmer_helper.dart';
-import '../../data/models/view_model/transaction_view_model/transaction_view_model.dart';
+import '../../data/models/hive_adapters/transaction_view_model/transaction_view_model.dart';
 
 part 'intro/intro_thumbnail.dart';
 part 'intro/intro_overview.dart';

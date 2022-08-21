@@ -1,4 +1,4 @@
-import '../../data/models/view_model/user_view_model/user_view_model.dart';
+import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../presentation/modal_bottom_sheets/index.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';

@@ -16,7 +16,7 @@ abstract class HiveService {
   Future<void> cacheTransactionTypes(
       String key, List<TransactionTypeViewModel> value);
 
-  fetchCachedTransactionTypes(String key);
+  dynamic fetchCachedTransactionTypes(String key);
 
   bool isTransactionTypesCached(String key);
 }

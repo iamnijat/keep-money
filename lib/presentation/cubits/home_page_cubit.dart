@@ -1,6 +1,6 @@
 import '../../core/utils/graphql/graphql_queries.dart';
-import '../../data/models/view_model/transaction_view_model/transaction_view_model.dart';
-import '../../data/models/view_model/user_view_model/user_view_model.dart';
+import '../../data/models/hive_adapters/transaction_view_model/transaction_view_model.dart';
+import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../domain/use_cases/transactions_use_cases/remove_transaction.dart';
 import '../../domain/use_cases/user_use_cases/get_user.dart';
 import 'package:fimber/fimber.dart';
@@ -72,11 +72,11 @@ extension HomePageCubitCalculateExpenseExtension on HomePageCubit {
 
 /// Calculate Today's Expense Extension
 extension HomePageCubitCalculateTodaysExpenseExtension on HomePageCubit {
-  double get todayExpense {
+  String get todayExpense {
     final todaysList = transactions
         .where((element) => element.createdAt == currentDate)
         .toList();
-    return todaysList.isEmpty ? 0.0 : todaysList.sumUp;
+    return todaysList.isEmpty ? "0.0" : todaysList.sumUp.toStringAsFixed(1);
   }
 }
 

@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import '../../../core/error/failures.dart';
 import '../../../core/use_cases/use_case.dart';
 import '../../../core/utils/either.dart';
-import '../../../data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
+import '../../../data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 import '../../repositories/transaction_types_repository.dart';
 
 class GetTransactionTypes extends UseCase<

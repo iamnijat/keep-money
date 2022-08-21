@@ -1,7 +1,7 @@
 library modal_bottom_sheets;
 
-import 'package:keep_money/data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
-import 'package:keep_money/data/models/view_model/user_view_model/user_view_model.dart';
+import 'package:keep_money/data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
+import 'package:keep_money/data/models/hive_adapters/user_view_model/user_view_model.dart';
 import 'package:keep_money/presentation/cubits/add_transaction_cubit.dart';
 import 'package:keep_money/presentation/cubits/personal_info_modal_bottom_sheet_cubit.dart';
 import 'package:keep_money/presentation/cubits/profile_preferences_cubit.dart';

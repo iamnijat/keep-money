@@ -51,7 +51,7 @@ class HiveServiceImpl implements HiveService {
       await transactionTypeBox.put(key, value);
 
   @override
-  fetchCachedTransactionTypes(String key) =>
+  dynamic fetchCachedTransactionTypes(String key) =>
       transactionTypeBox.get(key, defaultValue: <TransactionTypeViewModel>[]);
 
   @override

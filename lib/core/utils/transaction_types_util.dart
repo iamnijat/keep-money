@@ -1,4 +1,4 @@
-import '../../data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
+import '../../data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 
 abstract class TransactionTypesUtil {
   const TransactionTypesUtil._();

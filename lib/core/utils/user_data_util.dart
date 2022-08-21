@@ -1,5 +1,5 @@
-import '../../data/models/view_model/transaction_view_model/transaction_view_model.dart';
-import '../../data/models/view_model/user_view_model/user_view_model.dart';
+import '../../data/models/hive_adapters/transaction_view_model/transaction_view_model.dart';
+import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 
 abstract class UserDataUtil {
   const UserDataUtil._();

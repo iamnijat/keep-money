@@ -8,7 +8,7 @@ import 'package:rxdart/rxdart.dart';
 import '../../../core/services/router_service/index.dart';
 import '../../core/utils/date_format_util.dart';
 import '../../core/utils/graphql/graphql_queries.dart';
-import '../../data/models/view_model/transaction_type_view_model/transaction_type_view_model.dart';
+import '../../data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 
 enum AddTransactionState { initial, loading, error, done }
 

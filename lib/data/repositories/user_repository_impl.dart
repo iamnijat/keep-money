@@ -8,7 +8,7 @@ import '../../core/error/exceptions.dart';
 import '../../core/utils/either.dart';
 import '../../core/error/failures.dart';
 import '../../core/utils/user_data_util.dart';
-import '../models/view_model/user_view_model/user_view_model.dart';
+import '../models/hive_adapters/user_view_model/user_view_model.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final UserRemoteDataSource remoteDataSource;
