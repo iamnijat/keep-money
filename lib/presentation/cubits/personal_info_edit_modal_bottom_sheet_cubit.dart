@@ -69,19 +69,19 @@ class PersonalInfoEditModalBottomSheetCubit
 
   void updateName(String name) {
     if (_checkEmptyFormField(name)) {
-      _nameController.add('');
-      _nameController.addError('The field is empty');
+      _nameController.sink.add('');
+      _nameController.sink.addError('The field is empty');
     } else {
-      _nameController.add(name);
+      _nameController.sink.add(name);
     }
   }
 
   void updateIncome(String income) {
     if (_checkEmptyFormField(income)) {
-      _incomeController.add('');
-      _incomeController.addError('The field is empty');
+      _incomeController.sink.add('');
+      _incomeController.sink.addError('The field is empty');
     } else {
-      _incomeController.add(income);
+      _incomeController.sink.add(income);
     }
   }
 

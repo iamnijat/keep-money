@@ -48,7 +48,6 @@ import 'presentation/cubits/personal_info_edit_modal_bottom_sheet_cubit.dart';
 import 'presentation/cubits/personal_info_modal_bottom_sheet_cubit.dart';
 import 'presentation/cubits/profile_preferences_cubit.dart';
 import 'presentation/cubits/transaction_types_selection_cubit.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -187,8 +186,6 @@ void _setupCores() {
 Future<void> setupExternals() async {
   final prefs = await SharedPreferences.getInstance();
   getIt.registerLazySingleton(() => prefs);
-
-  getIt.registerLazySingleton(() => Connectivity());
 
   getIt.registerLazySingleton(() => InternetConnectionChecker());
 

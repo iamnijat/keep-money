@@ -4,14 +4,13 @@ description: Expense tracker for mean people.
 
 publish_to: "none"
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
 dependencies:
   animate_do: ^2.1.0
-  connectivity_plus: ^2.3.6+1
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   equatable: ^2.0.5
