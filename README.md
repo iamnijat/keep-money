@@ -1,10 +1,10 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/iamnijat/keep-money/Flutter%20CI/master)
-![GitHub forks](https://img.shields.io/github/forks/iamnijat/keep-money)
-![GitHub stars](https://img.shields.io/github/stars/iamnijat/keep-money)
-![GitHub watchers](https://img.shields.io/github/watchers/iamnijat/keep-money)
-![GitHub contributors](https://img.shields.io/github/contributors/iamnijat/keep-money)
-![GitHub last commit](https://img.shields.io/github/last-commit/iamnijat/keep-money)
-![GitHub top language](https://img.shields.io/github/languages/top/iamnijat/keep-money)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/iamnijat/keep_money/Flutter%20CI/master)
+![GitHub forks](https://img.shields.io/github/forks/iamnijat/keep_money)
+![GitHub stars](https://img.shields.io/github/stars/iamnijat/keep_money)
+![GitHub watchers](https://img.shields.io/github/watchers/iamnijat/keep_money)
+![GitHub contributors](https://img.shields.io/github/contributors/iamnijat/keep_money)
+![GitHub last commit](https://img.shields.io/github/last-commit/iamnijat/keep_money)
+![GitHub top language](https://img.shields.io/github/languages/top/iamnijat/keep_money)
 
 # Flutter Keep Money Application
 
