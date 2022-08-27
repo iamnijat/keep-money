@@ -1,4 +1,4 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/iamnijat/keep_money/Flutter%20CI/master)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/iamnijat/keep-money/Flutter%20CI/master)
 ![GitHub forks](https://img.shields.io/github/forks/iamnijat/keep_money)
 ![GitHub stars](https://img.shields.io/github/stars/iamnijat/keep_money)
 ![GitHub watchers](https://img.shields.io/github/watchers/iamnijat/keep_money)
