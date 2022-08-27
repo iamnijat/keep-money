@@ -1,0 +1,47 @@
+{
+    "@@locale": "en",
+    "introPageTitlePart1": "Your money saving",
+    "introPageTitlePart2": "buddy",
+    "introPageDesc" : "Struggled before to save hard earned money? We'll help you",
+    "introPageButtonText" : "Next",
+    "personalInfoModalBottomSheetTitle": "Authentication",
+    "personalInfoTitle": "Could you fill out your personal info?",
+    "personalInfoDesc": "We need them to define your identity to track your expenses and your name has to be unique.",
+    "personalInfoFormNameTitle": "Your Name",
+    "personalInfoFormIncomeTitle": "Your Income",
+    "personalInfoFormNameHintText": "Enter your name ..",
+    "personalInfoFormIncomeHintText": "Enter your income ..",
+    "homeBudgetOverviewHello": "Hello, {name}",
+    "@homeBudgetOverviewHello": {
+    "placeholders": {
+      "name": {
+        "type": "String?",
+        "example": "Name"
+        }
+      }
+    },
+    "homeBudgetOverviewAddTransaction": "Add Transaction",
+    "homeBudgetOverviewBudgetDesc": "Out off ₼ {income} budgeting",
+    "@homeBudgetOverviewBudgetDesc": {
+    "placeholders": {
+      "income": {
+        "type": "String?",
+        "example": "22.444"
+        }
+      }
+    },
+    "homePageTodayTitle": "Today",
+    "addTransactionModalBottomSheetTitle": "Add Transaction",
+    "transactionTypesModalBottomSheetTitle": "Transaction Types",
+    "addTransactionSelectTypeTitle": "Please, select type",
+    "errorPageTitle" : "Oh no, something went wrong!",
+    "errorPageDesc" : "The page you requested caught on fire!",
+    "errorPageRefreshButton" : "Extinguish it",
+    "profilePreferencesModalBottomSheetTitle": "Profile",
+    "profilePreferencesModalBottomSheetTitleMaleGender": "Male",
+    "profilePreferencesModalBottomSheetTitleFemaleGender": "Female",
+    "profilePreferencesModalBottomSheetProfileTitle": "Profile",
+    "profilePreferencesModalBottomSheetLogoutTitle": "Log out",
+    "personalInfoEditModalBottomSheetTitle": "Edit Profile"
+    
+}
