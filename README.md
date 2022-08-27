@@ -85,6 +85,6 @@ We'll handle the generation of required files for 🚀 your onboarding!
 Using this library to handle multi-languages. Follow this guide to understand and config languages files
 
 
--------
+---------
 
 You've done entire steps correctly and I make sure that this project will have paramount effect on your progress learning `Flutter`
