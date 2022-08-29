@@ -11,6 +11,10 @@
 
 ![thumbnail](https://user-images.githubusercontent.com/42466886/185780701-c94b156a-4274-4b7f-b5c7-e14a8cc724da.png)
 
+## Instructions
+
+Every code structure for this application is open source apart from API HOST. Since this is an application in production, you must establish your backend yourself.
+
 
 ## Supported Null safety
 
