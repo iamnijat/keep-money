@@ -28,7 +28,9 @@ class _PersonalInfoEditModalBottomSheetSubmitButtonState
           final isIncomeEmpty = widget._cubit.isIncomeEmpty;
 
           return IgnorePointer(
-              ignoring: _isLoading,
+              ignoring: _isLoading ||
+                  _isFormValid(isFormValid, isNameEmpty, isIncomeEmpty) ==
+                      false,
               child: AnimatedOpacity(
                 opacity:
                     _isFormValid(isFormValid, isNameEmpty, isIncomeEmpty) ==

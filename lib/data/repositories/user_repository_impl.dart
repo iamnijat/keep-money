@@ -1,13 +1,12 @@
+import '../../core/error/exceptions.dart';
+import '../../core/error/failures.dart';
 import '../../core/services/network_service/network_service.dart';
+import '../../core/utils/either.dart';
+import '../../core/utils/user_data_util.dart';
+import '../../domain/repositories/user_repository.dart';
 import '../data_sources/local/preferences_data_source/preferences_data_source.dart';
 import '../data_sources/local/user_local_data_source/user_local_data_source.dart';
 import '../data_sources/remote/user_remote_data_source/user_remote_data_source.dart';
-import '../../domain/repositories/user_repository.dart';
-
-import '../../core/error/exceptions.dart';
-import '../../core/utils/either.dart';
-import '../../core/error/failures.dart';
-import '../../core/utils/user_data_util.dart';
 import '../models/hive_adapters/user_view_model/user_view_model.dart';
 
 class UserRepositoryImpl implements UserRepository {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000165">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: google_play_track_version_codes" time="2.317955">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: Switch to android incrementVersion lane" time="0.000386">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to android setVersionNumber lane" time="0.000209">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: set_properties_value" time="0.001277">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: get_properties_value" time="0.000372">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: flutter packages get" time="6.741957">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: flutter clean" time="4.944857">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: flutter build appbundle --build-name=1.1.2 --build-number=4" time="56.307283">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

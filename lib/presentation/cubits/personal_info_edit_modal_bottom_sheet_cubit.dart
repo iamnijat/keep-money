@@ -62,7 +62,7 @@ class PersonalInfoEditModalBottomSheetCubit
         _emittingState(PersonalInfoEditModalBottomSheetState.done);
         if (!mounted) return;
         Fimber.d('Sucessfully edited personal info');
-        back(context);
+        back(context, args: "true");
       },
     );
   }

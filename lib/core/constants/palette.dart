@@ -7,6 +7,7 @@ abstract class AppPalette {
   static const redColor = Colors.red;
   static const transparentColor = Colors.transparent;
 
+  static const errorColor = Color.fromRGBO(235, 87, 87, 1);
   static const blackHeadlineColor = Color.fromRGBO(30, 25, 38, 1);
   static const greyHeadlineColor = Color.fromRGBO(152, 152, 152, 1);
   static const secondaryGreyColor = Color.fromRGBO(206, 204, 223, 1);

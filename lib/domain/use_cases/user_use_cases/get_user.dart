@@ -1,11 +1,10 @@
-import '../../../data/models/hive_adapters/user_view_model/user_view_model.dart';
-import '../../repositories/user_repository.dart';
+import 'package:equatable/equatable.dart';
 
+import '../../../core/error/failures.dart';
 import '../../../core/use_cases/use_case.dart';
 import '../../../core/utils/either.dart';
-import '../../../core/error/failures.dart';
-
-import 'package:equatable/equatable.dart';
+import '../../../data/models/hive_adapters/user_view_model/user_view_model.dart';
+import '../../repositories/user_repository.dart';
 
 class GetUser
     extends UseCase<Future<Either<Failure, UserViewModel?>>, GetUserParams> {

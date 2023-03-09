@@ -1,21 +1,21 @@
 name: keep_money
 
-description: Expense tracker for mean people.
+description: Expense tracker for people.
 
 publish_to: "none"
 
-version: 1.0.0+2
+version: 1.0.1+11
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
 dependencies:
-  animate_do: ^2.1.0
+  animate_do: ^3.0.2
+  another_flushbar: ^1.12.29
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   equatable: ^2.0.5
   fading_edge_scrollview: ^2.0.1
-  internet_connection_checker: ^0.0.1+4
   fimber: ^0.6.6
   flutter:
     sdk: flutter
@@ -28,9 +28,11 @@ dependencies:
   graphql: ^5.1.1
   hive: ^2.2.1
   hive_flutter: ^1.1.0
+  internet_connection_checker: ^0.0.1+4
   intl: ^0.17.0
   modal_bottom_sheet: ^2.0.1
   path_provider: ^2.0.11
+  patrol: ^0.6.4
   rxdart: ^0.27.5
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0

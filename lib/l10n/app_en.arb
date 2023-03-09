@@ -21,6 +21,15 @@
       }
     },
     "homeBudgetOverviewAddTransaction": "Add Transaction",
+    "homeBudgetOverviewBudgetSpentDesc": "You've spent ₼ {income} budgeting",
+    "@homeBudgetOverviewBudgetSpentDesc": {
+    "placeholders": {
+      "income": {
+        "type": "String?",
+        "example": "22.444"
+        }
+      }
+    },
     "homeBudgetOverviewBudgetDesc": "Out off ₼ {income} budgeting",
     "@homeBudgetOverviewBudgetDesc": {
     "placeholders": {
@@ -37,6 +46,7 @@
     "errorPageTitle" : "Oh no, something went wrong!",
     "errorPageDesc" : "The page you requested caught on fire!",
     "errorPageRefreshButton" : "Extinguish it",
+    "errorInternetConnection": "You have an internet connection problem",
     "profilePreferencesModalBottomSheetTitle": "Profile",
     "profilePreferencesModalBottomSheetTitleMaleGender": "Male",
     "profilePreferencesModalBottomSheetTitleFemaleGender": "Female",

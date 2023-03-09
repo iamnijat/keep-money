@@ -27,8 +27,7 @@ abstract class AppConfigs {
       await _init();
 
       SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: AppPalette.transparentColor,
-      ));
+          statusBarColor: AppPalette.transparentColor));
 
       SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);

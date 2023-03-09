@@ -69,8 +69,13 @@ class _ProfilePreferencesModalBottomSheetBodyState
                                 .profilePreferencesModalBottomSheetProfileTitle,
                             onTap: () {
                               showPersonalInfoEditModalBottomSheet(
-                                  context, widget._localization,
-                                  user: widget._user);
+                                      context, widget._localization,
+                                      user: widget._user)
+                                  .then((value) {
+                                if (value != null) {
+                                  context.read<HomePageCubit>().fetchUser();
+                                }
+                              });
                             },
                           ),
                           const VerticalSpacer(3),

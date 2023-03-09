@@ -15,8 +15,8 @@ class PersonalInfoButton extends StatelessWidget {
           showPersonalInfoModalBottomSheet(context, _localization);
         },
         style: TextButton.styleFrom(
+            foregroundColor: AppPalette.greyHeadlineColor,
             shadowColor: AppPalette.greyHeadlineColor,
-            primary: AppPalette.greyHeadlineColor,
             backgroundColor: AppPalette.whiteColor),
         child: buildButtonText(_localization.introPageButtonText));
   }

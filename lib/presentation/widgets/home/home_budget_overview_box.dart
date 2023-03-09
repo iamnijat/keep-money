@@ -29,8 +29,7 @@ class HomeBudgetOverviewbox extends StatelessWidget {
             InkWell(
               onTap: () {
                 showProfilePreferencesModalBottomSheet(context, _localization,
-                        user: _cubit.user)
-                    .then((value) => _cubit.fetchUser());
+                    user: _cubit.user, cubit: _cubit);
               },
               child: AnimatedOpacity(
                 opacity: _isLoading ? 0 : 1,
@@ -56,7 +55,7 @@ class HomeBudgetOverviewbox extends StatelessWidget {
                   text: '₼ $_expense\n\n',
                   style: AppStyles.whiteColor24spw700Montserrat),
               TextSpan(
-                  text: _localization.homeBudgetOverviewBudgetDesc(_income),
+                  text: _budgetDesc,
                   style: AppStyles.thirdGreyColor12spw500Montserrat),
             ]),
           ),
@@ -85,6 +84,18 @@ class HomeBudgetOverviewbox extends StatelessWidget {
       return '';
     } else {
       return _isEmpty ? "0" : _cubit.expense.toString().parseAndRound;
+    }
+  }
+
+  String get _budgetDesc {
+    if (_isLoading) {
+      return '';
+    } else {
+      if (double.parse(_expense) > double.parse(_income)) {
+        return _localization.homeBudgetOverviewBudgetSpentDesc(_income);
+      } else {
+        return _localization.homeBudgetOverviewBudgetDesc(_income);
+      }
     }
   }
 

@@ -18,6 +18,7 @@ class PersonalInfoEditModalBottomSheetForm extends StatefulWidget {
 class _PersonalInfoEditModalBottomSheetFormState
     extends State<PersonalInfoEditModalBottomSheetForm> {
   final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Form(

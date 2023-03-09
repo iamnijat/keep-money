@@ -53,6 +53,14 @@ abstract class AppStyles {
     fontFamily: montserratRegularFontFamily,
   );
 
+  static final errorSnackbarTextStyle = TextStyle(
+    color: AppPalette.whiteColor,
+    fontSize: 10.sp,
+    height: 1.3,
+    fontFamily: montserratRegularFontFamily,
+    fontWeight: FontWeight.bold,
+  );
+
   static final mainBlueColor14spw700Montserrat1 = TextStyle(
     color: AppPalette.mainBlueColor,
     fontSize: 14.sp,

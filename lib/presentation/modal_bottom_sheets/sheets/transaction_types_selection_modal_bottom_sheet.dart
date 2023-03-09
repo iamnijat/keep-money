@@ -54,6 +54,7 @@ class _TransactionTypesSelectionModalBottomSheetBody extends StatelessWidget {
                                   backTap: () => cubit.back(context)),
                               const VerticalSpacer(4),
                               TransactionTypeModalOverview(cubit),
+                              const VerticalSpacer(3),
                               buildViewInsetsPadding(context),
                             ],
                           );

@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
 
   static final navigationKey = GlobalKey<NavigatorState>();
 
+  static const locale = Locale('en');
+
   @override
   Widget build(BuildContext context) {
-    const locale = Locale('en');
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
-        title: 'Budget Management',
+        title: 'Keep Money',
         debugShowCheckedModeBanner: false,
         navigatorKey: Routes.navigationKey,
         localizationsDelegates: AppLocalizations.localizationsDelegates,

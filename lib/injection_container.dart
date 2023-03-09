@@ -165,6 +165,7 @@ void _setUpUseCases() {
 
   getIt.registerLazySingleton(() => GetTransactionTypes(getIt()));
   getIt.registerLazySingleton(() => GetUser(getIt()));
+
   getIt.registerLazySingleton(() => UpdateUser(getIt()));
   getIt.registerLazySingleton(() => ClearSharedData(getIt()));
 

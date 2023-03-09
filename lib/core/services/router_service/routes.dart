@@ -5,6 +5,8 @@ abstract class Routes {
 
   static final navigationKey = GlobalKey<NavigatorState>();
 
+  static BuildContext? get context => navigationKey.currentContext;
+
   static const String splashPage = '/';
   static const String introPage = '/introPage';
   static const String personalInformationPage = "/personalInformationPage";

@@ -58,6 +58,7 @@ class _SplashPageBody extends StatelessWidget {
       children: [
         Center(
           child: Container(
+            key: const Key("splashPageIndicator"),
             height: 28.h,
             width: 28.h,
             decoration: const BoxDecoration(

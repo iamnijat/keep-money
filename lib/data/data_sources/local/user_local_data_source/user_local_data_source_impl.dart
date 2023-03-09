@@ -25,5 +25,5 @@ class UserLocalDataSourceImpl implements UserLocalDataSource {
   }
 
   @override
-  bool isUserCached(String key) => _hive.isUserCached(key);
+  bool isUserCached(String key) => _hive.isUserCached(cachedUser);
 }

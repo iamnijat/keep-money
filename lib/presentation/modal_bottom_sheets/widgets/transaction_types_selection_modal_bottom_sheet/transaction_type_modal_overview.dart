@@ -15,6 +15,7 @@ class TransactionTypeModalOverview extends StatelessWidget {
           child: ListView.builder(
               itemCount: _cubit.types?.length,
               shrinkWrap: true,
+              physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 return Padding(
                   padding:

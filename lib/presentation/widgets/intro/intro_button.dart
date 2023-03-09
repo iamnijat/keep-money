@@ -12,12 +12,13 @@ class IntroButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
+        key: const Key("introNextButton"),
         onPressed: () {
           _cubit.checkRoute(context);
         },
         style: TextButton.styleFrom(
+            foregroundColor: AppPalette.greyHeadlineColor,
             shadowColor: AppPalette.greyHeadlineColor,
-            primary: AppPalette.greyHeadlineColor,
             backgroundColor: AppPalette.whiteColor),
         child: buildButtonText(_localization.introPageButtonText));
   }
