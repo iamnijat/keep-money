@@ -37,7 +37,7 @@ class _PersonalInfoEditModalBottomSheetSubmitButtonState
                             true
                         ? 1
                         : 0,
-                duration: Durations.fourHundredMillisecondsDuration,
+                duration: DurationsUtil.fourHundredMillisecondsDuration,
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: GestureDetector(

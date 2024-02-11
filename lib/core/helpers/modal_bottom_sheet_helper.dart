@@ -1,18 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../presentation/cubits/home_page_cubit.dart';
 import '../../presentation/modal_bottom_sheets/index.dart';
-import 'package:flutter/material.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../constants/palette.dart';
 import '../constants/styles.dart';
 
 void showPersonalInfoModalBottomSheet(
     context, AppLocalizations localization) async {
-  return showMaterialModalBottomSheet(
+  return showModalBottomSheet(
     backgroundColor: AppPalette.whiteColor,
     shape: AppStyles.modalBottomSheetShapeDecorationStyle,
     enableDrag: true,
@@ -25,7 +23,7 @@ void showPersonalInfoModalBottomSheet(
 Future showPersonalInfoEditModalBottomSheet(
     context, AppLocalizations localization,
     {required UserViewModel? user}) async {
-  return showMaterialModalBottomSheet(
+  return showModalBottomSheet(
     backgroundColor: AppPalette.whiteColor,
     shape: AppStyles.modalBottomSheetShapeDecorationStyle,
     enableDrag: true,
@@ -37,7 +35,7 @@ Future showPersonalInfoEditModalBottomSheet(
 
 Future showAddTransactionModalBottomSheet(
     context, AppLocalizations localization) async {
-  return showMaterialModalBottomSheet(
+  return showModalBottomSheet(
       backgroundColor: AppPalette.whiteColor,
       shape: AppStyles.modalBottomSheetShapeDecorationStyle,
       enableDrag: true,
@@ -49,7 +47,7 @@ Future showAddTransactionModalBottomSheet(
 Future showProfilePreferencesModalBottomSheet(
     context, AppLocalizations localization,
     {required UserViewModel? user, required HomePageCubit cubit}) async {
-  return showMaterialModalBottomSheet(
+  return showModalBottomSheet(
       backgroundColor: AppPalette.whiteColor,
       shape: AppStyles.modalBottomSheetShapeDecorationStyle,
       enableDrag: true,
@@ -60,7 +58,7 @@ Future showProfilePreferencesModalBottomSheet(
 }
 
 Future showTransactionTypesModalBottomSheet(context) async {
-  return showMaterialModalBottomSheet(
+  return showModalBottomSheet(
       backgroundColor: AppPalette.whiteColor,
       shape: AppStyles.modalBottomSheetShapeDecorationStyle,
       enableDrag: true,

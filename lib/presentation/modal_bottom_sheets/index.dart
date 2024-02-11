@@ -1,5 +1,11 @@
 library modal_bottom_sheets;
 
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 import 'package:keep_money/data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 import 'package:keep_money/data/models/hive_adapters/user_view_model/user_view_model.dart';
 import 'package:keep_money/presentation/cubits/add_transaction_cubit.dart';
@@ -7,13 +13,6 @@ import 'package:keep_money/presentation/cubits/personal_info_modal_bottom_sheet_
 import 'package:keep_money/presentation/cubits/profile_preferences_cubit.dart';
 import 'package:keep_money/presentation/cubits/transaction_types_selection_cubit.dart';
 import 'package:keep_money/presentation/widgets/index.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../core/constants/assets.dart';

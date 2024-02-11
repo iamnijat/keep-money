@@ -1,5 +1,5 @@
-abstract class Durations {
-  const Durations._();
+abstract class DurationsUtil {
+  const DurationsUtil._();
 
   static const oneHundredMillisecondsDuration = Duration(milliseconds: 100);
   static const twoHundredFiftyMillisecondsDuration =

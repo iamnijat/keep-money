@@ -33,7 +33,7 @@ class HomeBudgetOverviewbox extends StatelessWidget {
               },
               child: AnimatedOpacity(
                 opacity: _isLoading ? 0 : 1,
-                duration: Durations.fourHundredMillisecondsDuration,
+                duration: DurationsUtil.fourHundredMillisecondsDuration,
                 child: Container(
                   width: 5.h,
                   height: 5.h,

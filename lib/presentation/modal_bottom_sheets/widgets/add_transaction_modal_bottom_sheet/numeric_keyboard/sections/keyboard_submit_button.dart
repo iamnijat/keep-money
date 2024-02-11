@@ -31,7 +31,7 @@ class _KeyboardSubmitButtonState extends State<KeyboardSubmitButton> {
             child: AnimatedContainer(
               height: 24.h,
               width: 34.w,
-              duration: Durations.threeHundredMillisecondsDuration,
+              duration: DurationsUtil.threeHundredMillisecondsDuration,
               decoration: BoxDecoration(
                 color:
                     isFormValid && !isLastOfAmountContainsDot && !isAmountEmpty

@@ -4,6 +4,7 @@
    <application
         android:label="Keep Money"
         android:allowBackup="false"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupOnly="false"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">

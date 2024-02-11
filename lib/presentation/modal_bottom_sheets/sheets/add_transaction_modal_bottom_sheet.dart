@@ -33,7 +33,6 @@ class _AddTransactionModalBottomSheetBodyState
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        controller: ModalScrollController.of(context),
         child: Material(
             type: MaterialType.transparency,
             child:

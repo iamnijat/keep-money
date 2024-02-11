@@ -37,7 +37,10 @@ class AddTransactionModalDateField extends StatelessWidget {
       AppAssets.dateIcon,
       height: 2.1.h,
       width: 2.1.h,
-      color: AppPalette.whiteColor,
+      colorFilter: const ColorFilter.mode(
+        AppPalette.whiteColor,
+        BlendMode.srcIn,
+      ),
     );
   }
 

@@ -55,7 +55,7 @@ class AddTransactionModalTypeField extends StatelessWidget {
 
   AnimatedSwitcher buildTitle(String text) {
     return AnimatedSwitcher(
-      duration: Durations.twoHundredFiftyMillisecondsDuration,
+      duration: DurationsUtil.twoHundredFiftyMillisecondsDuration,
       transitionBuilder: (Widget child, Animation<double> animation) =>
           ScaleTransition(
         scale: animation,

@@ -28,7 +28,8 @@ class AddTransactionModalAmountField extends StatelessWidget {
                 builder: (context, snapshot) {
                   final amountValue = snapshot.data;
                   return AnimatedSwitcher(
-                      duration: Durations.twoHundredFiftyMillisecondsDuration,
+                      duration:
+                          DurationsUtil.twoHundredFiftyMillisecondsDuration,
                       transitionBuilder:
                           (Widget child, Animation<double> animation) =>
                               ScaleTransition(scale: animation, child: child),

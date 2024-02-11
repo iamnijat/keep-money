@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:keep_money/core/constants/durations.dart';
+
 import '../../domain/use_cases/preferences_use_cases/get_user_id.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +9,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/services/router_service/index.dart';
 import '../../../core/use_cases/use_case.dart';
-import '../../core/constants/durations.dart';
 
 enum SplashPageState { loading, error, done }
 
@@ -52,7 +53,7 @@ class SplashPageCubit extends Cubit<SplashPageState> {
       navigation.openHomePage(context);
 
   _addDelay() async =>
-      await Future.delayed(Durations.threeHundredMillisecondsDuration);
+      await Future.delayed(DurationsUtil.threeHundredMillisecondsDuration);
 
   void _emitSuccessState() {
     _emittingState(SplashPageState.done);

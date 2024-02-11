@@ -1,4 +1,4 @@
 class AppStrings {
   const AppStrings._();
-  static const apiHost = 'YOUR_URL';
+  static const apiHost = 'https://gifted-jumpsuit-lion.cyclic.app/graphql';
 }

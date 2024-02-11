@@ -42,7 +42,7 @@ class _TransactionTypeItemState extends State<TransactionTypeItem> {
                 final typeValue = snapshot.data?.type;
                 return AnimatedOpacity(
                   opacity: typeValue == _type ? 1 : 0,
-                  duration: Durations.threeHundredMillisecondsDuration,
+                  duration: DurationsUtil.threeHundredMillisecondsDuration,
                   child: Container(
                     padding:
                         EdgeInsets.symmetric(horizontal: 2.w, vertical: 2.w),
@@ -52,7 +52,10 @@ class _TransactionTypeItemState extends State<TransactionTypeItem> {
                     child: Center(
                         child: SvgPicture.asset(
                       AppAssets.whiteDoneIcon,
-                      color: AppPalette.whiteColor,
+                      colorFilter: const ColorFilter.mode(
+                        AppPalette.whiteColor,
+                        BlendMode.srcIn,
+                      ),
                       height: 1.5.w,
                       width: 1.5.w,
                     )),

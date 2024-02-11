@@ -31,8 +31,8 @@ class PersonalInfoEditModalBottomSheetGenderField extends StatelessWidget {
                               _cubit.updateGender(gender);
                             },
                             child: AnimatedSwitcher(
-                              duration:
-                                  Durations.twoHundredFiftyMillisecondsDuration,
+                              duration: DurationsUtil
+                                  .twoHundredFiftyMillisecondsDuration,
                               transitionBuilder:
                                   (Widget child, Animation<double> animation) =>
                                       ScaleTransition(

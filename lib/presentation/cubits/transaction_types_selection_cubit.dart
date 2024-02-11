@@ -1,3 +1,4 @@
+import '../../core/constants/durations.dart';
 import '../../core/utils/graphql/graphql_queries.dart';
 import '../../data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';
 import '../../domain/use_cases/transaction_types_use_cases/get_transaction_types.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rxdart/rxdart.dart';
 
-import '../../core/constants/durations.dart';
 import '../../core/services/router_service/index.dart';
 
 enum TransactionTypesSelectionState { initial, loading, error, done }
@@ -58,7 +58,7 @@ class TransactionTypesSelectionCubit
   ) async {
     _typesSelectionController.add(typeModel);
 
-    await _addDelay(Durations.oneHundredMillisecondsDuration);
+    await _addDelay(DurationsUtil.oneHundredMillisecondsDuration);
     if (!mounted) return;
     back(context, args: typeModel);
   }

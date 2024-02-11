@@ -13,7 +13,7 @@ class PersonalInfoModalBottomSheetAvatarField extends StatelessWidget {
         builder: (context, snapshot) {
           final genderValue = snapshot.data;
           return AnimatedContainer(
-            duration: Durations.twoHundredFiftyMillisecondsDuration,
+            duration: DurationsUtil.twoHundredFiftyMillisecondsDuration,
             key: UniqueKey(),
             width: 15.h,
             height: 15.h,

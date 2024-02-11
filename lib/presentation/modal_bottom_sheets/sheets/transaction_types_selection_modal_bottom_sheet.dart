@@ -23,7 +23,6 @@ class _TransactionTypesSelectionModalBottomSheetBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final localization = AppLocalizations.of(context)!;
     return SingleChildScrollView(
-        controller: ModalScrollController.of(context),
         child: Material(
             type: MaterialType.transparency,
             child: Padding(

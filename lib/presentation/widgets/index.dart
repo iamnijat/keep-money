@@ -1,6 +1,7 @@
 library widgets;
 
 import 'package:animate_do/animate_do.dart';
+import 'package:keep_money/core/constants/durations.dart';
 import 'package:keep_money/core/extensions/string_extensions.dart';
 import 'package:keep_money/core/utils/date_format_util.dart';
 import 'package:keep_money/data/models/hive_adapters/user_view_model/user_view_model.dart';
@@ -13,7 +14,6 @@ import 'package:fading_edge_scrollview/fading_edge_scrollview.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 import '../../core/constants/assets.dart';
-import '../../core/constants/durations.dart';
 import '../../core/constants/palette.dart';
 import '../../core/constants/styles.dart';
 import '../../core/helpers/modal_bottom_sheet_helper.dart';
