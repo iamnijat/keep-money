@@ -86,6 +86,10 @@ class _HomeBudgetDetailsBoxState extends State<HomeBudgetDetailsBox> {
                                           widget._cubit, data, index);
                                     }),
                               )),
+                          Padding(
+                            padding: EdgeInsets.only(
+                                bottom: MediaQuery.of(context).padding.bottom),
+                          ),
                         ],
                       )),
       ),

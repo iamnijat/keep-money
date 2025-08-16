@@ -72,7 +72,9 @@ class _ProfilePreferencesModalBottomSheetBodyState
                                       user: widget._user)
                                   .then((value) {
                                 if (value != null) {
-                                  context.read<HomePageCubit>().fetchUser();
+                                  if (context.mounted) {
+                                    context.read<HomePageCubit>().fetchUser();
+                                  }
                                 }
                               });
                             },
@@ -91,6 +93,10 @@ class _ProfilePreferencesModalBottomSheetBodyState
                       ),
                     ),
                     buildViewInsetsPadding(context),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).padding.bottom),
+                    ),
                   ],
                 );
               }),

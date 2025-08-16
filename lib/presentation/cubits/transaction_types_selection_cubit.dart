@@ -60,7 +60,9 @@ class TransactionTypesSelectionCubit
 
     await _addDelay(DurationsUtil.oneHundredMillisecondsDuration);
     if (!mounted) return;
-    back(context, args: typeModel);
+    if (context.mounted) {
+      back(context, args: typeModel);
+    }
   }
 
   void _emitErrorState() {

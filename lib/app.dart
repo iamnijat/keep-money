@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:keep_money/l10n/app_localizations.dart';
 import 'package:sizer/sizer.dart';
 
 import 'core/services/router_service/index.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   static final navigationKey = GlobalKey<NavigatorState>();
 

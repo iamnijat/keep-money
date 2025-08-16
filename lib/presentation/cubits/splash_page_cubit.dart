@@ -35,11 +35,15 @@ class SplashPageCubit extends Cubit<SplashPageState> {
         if (userId != null) {
           await _addDelay();
           if (!mounted) return;
-          _navigateToHomePage(context);
+          if (context.mounted) {
+            _navigateToHomePage(context);
+          }
         } else {
           await _addDelay();
           if (!mounted) return;
-          _navigateToIntroPage(context);
+          if (context.mounted) {
+            _navigateToIntroPage(context);
+          }
         }
         _emitSuccessState();
       },

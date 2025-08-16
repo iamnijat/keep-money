@@ -5,8 +5,8 @@ class PersonalInfoButton extends StatelessWidget {
 
   const PersonalInfoButton(
     this._localization, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

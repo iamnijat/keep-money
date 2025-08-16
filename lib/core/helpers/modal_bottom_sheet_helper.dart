@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:keep_money/l10n/app_localizations.dart';
 
 import '../../data/models/hive_adapters/user_view_model/user_view_model.dart';
 import '../../presentation/cubits/home_page_cubit.dart';

@@ -22,7 +22,9 @@ class ProfilePreferencesCubit extends Cubit<ProfilePreferencesState> {
 
     if (clearSharedDataResult.isSuccess()) {
       if (!mounted) return;
-      _navigateToIntroPage(context);
+      if (context.mounted) {
+        _navigateToIntroPage(context);
+      }
       _emitSuccessState();
     } else {
       _emitErrorState();

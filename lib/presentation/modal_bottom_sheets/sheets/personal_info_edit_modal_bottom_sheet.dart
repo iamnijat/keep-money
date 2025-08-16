@@ -6,8 +6,8 @@ class PersonalInfoEditModalBottomSheet extends StatelessWidget {
   const PersonalInfoEditModalBottomSheet(
     this._localization,
     this._user, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +68,11 @@ class _PersonalInfoEditModalBottomSheetBodyState
                                 widget._localization, cubit, state,
                                 user: widget._user),
                             buildViewInsetsPadding(context),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  bottom:
+                                      MediaQuery.of(context).padding.bottom),
+                            ),
                           ],
                         );
                       }),

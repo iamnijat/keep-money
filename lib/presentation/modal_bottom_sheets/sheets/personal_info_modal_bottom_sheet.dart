@@ -67,6 +67,10 @@ class _PersonalInfoModalBottomSheetBodyState
                   Padding(
                     padding: EdgeInsets.only(bottom: context.viewInsetsBottom),
                   ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).padding.bottom),
+                  ),
                 ]))));
   }
 

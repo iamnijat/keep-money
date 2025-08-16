@@ -16,6 +16,7 @@ class PersonalInfoEditModalBottomSheetSubmitButton extends StatefulWidget {
 class _PersonalInfoEditModalBottomSheetSubmitButtonState
     extends State<PersonalInfoEditModalBottomSheetSubmitButton> {
   bool get _isLoading =>
+      // ignore: unrelated_type_equality_checks
       widget._state == PersonalInfoModalBottomSheetState.loading;
 
   @override

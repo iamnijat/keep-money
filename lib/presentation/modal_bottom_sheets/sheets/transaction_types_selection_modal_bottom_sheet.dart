@@ -41,10 +41,14 @@ class _TransactionTypesSelectionModalBottomSheetBody extends StatelessWidget {
                           });
                         }
                         if (state == TransactionTypesSelectionState.loading) {
-                          return const ShimmerLoadingIndicator();
+                          return const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 24),
+                            child: ShimmerLoadingIndicator(),
+                          );
                         }
                         if (state == TransactionTypesSelectionState.done) {
                           return Column(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               const VerticalSpacer(4),
                               ModalBottomSheetHeader(
@@ -54,7 +58,6 @@ class _TransactionTypesSelectionModalBottomSheetBody extends StatelessWidget {
                               const VerticalSpacer(4),
                               TransactionTypeModalOverview(cubit),
                               const VerticalSpacer(3),
-                              buildViewInsetsPadding(context),
                             ],
                           );
                         }

@@ -2,7 +2,7 @@ part of modal_bottom_sheets;
 
 class KeyboardBackspaceButton extends StatelessWidget {
   final VoidCallback _onTap;
-  const KeyboardBackspaceButton(this._onTap, {Key? key}) : super(key: key);
+  const KeyboardBackspaceButton(this._onTap, {super.key});
 
   @override
   Widget build(BuildContext context) {

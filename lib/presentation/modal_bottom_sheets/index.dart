@@ -3,7 +3,7 @@ library modal_bottom_sheets;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:keep_money/l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 import 'package:keep_money/data/models/hive_adapters/transaction_type_view_model/transaction_type_view_model.dart';

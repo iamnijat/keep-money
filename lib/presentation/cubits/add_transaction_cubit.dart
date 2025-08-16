@@ -34,7 +34,9 @@ class AddTransactionCubit extends Cubit<AddTransactionState> {
 
     if (createTransationResult.isSuccess()) {
       if (!mounted) return;
-      _emitSuccessState(context);
+      if (context.mounted) {
+        _emitSuccessState(context);
+      }
     } else {
       _emitErrorState();
       return;

@@ -4,8 +4,8 @@ class AddTransactionModalBottomSheet extends StatelessWidget {
   final AppLocalizations _localization;
   const AddTransactionModalBottomSheet(
     this._localization, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +18,7 @@ class AddTransactionModalBottomSheet extends StatelessWidget {
 
 class _AddTransactionModalBottomSheetBody extends StatefulWidget {
   final AppLocalizations _localization;
-  const _AddTransactionModalBottomSheetBody(
-    this._localization, {
-    Key? key,
-  }) : super(key: key);
+  const _AddTransactionModalBottomSheetBody(this._localization);
 
   @override
   State<_AddTransactionModalBottomSheetBody> createState() =>
@@ -76,6 +73,10 @@ class _AddTransactionModalBottomSheetBodyState
             ),
             AddTransactionModalNumericKeyboard(cubit, state),
             buildViewInsetsPadding(context),
+            Padding(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).padding.bottom),
+            ),
           ],
         );
       }),
