@@ -49,7 +49,8 @@ class PersonalInfoModalBottomSheetCubit
         }));
 
     registerUserResult.when(
-      error: (_) {
+      error: (e) {
+        Fimber.e('Authentication failed', ex: e);
         _emitErrorState();
         return;
       },

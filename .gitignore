@@ -50,3 +50,23 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Build-time secrets (see env.example.json)
+env.json
+env.*.json
+!env.example.json
+
+# Local environment files
+.env
+.env.*
+
+# Signing & provisioning
+# (Android keystores and key.properties are covered by android/.gitignore)
+*.p12
+*.p8
+*.mobileprovision
+*.cer
+
+# Service config that can embed keys
+google-services.json
+GoogleService-Info.plist

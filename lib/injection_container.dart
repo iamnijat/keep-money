@@ -190,6 +190,17 @@ Future<void> setupExternals() async {
 
   getIt.registerLazySingleton(() => InternetConnectionChecker());
 
-  getIt.registerLazySingleton(() =>
-      GraphQLClient(link: HttpLink(AppStrings.apiHost), cache: GraphQLCache()));
+  assert(
+    AppStrings.apiHost.isNotEmpty && AppStrings.apiKey.isNotEmpty,
+    'API_HOST and API_KEY are missing. Run with '
+    '--dart-define-from-file=env.json',
+  );
+
+  getIt.registerLazySingleton(() => GraphQLClient(
+        link: HttpLink(
+          AppStrings.apiHost,
+          defaultHeaders: const {'x-api-key': AppStrings.apiKey},
+        ),
+        cache: GraphQLCache(),
+      ));
 }

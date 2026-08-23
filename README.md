@@ -54,26 +54,68 @@ In the project we use Plugin `get_it` to implement DI and we have also defined c
 The project has predefined Named routes
 
 ##### Build App
-You can build the app using the commands
+Every build must pass `--dart-define-from-file=env.json` — see
+[Environment configuration](#environment-configuration) below.
+
+> On a release build, omitting it does **not** fail. Assertions are stripped, so
+> the build succeeds and produces a signed artifact with an empty API host and
+> key that only fails once installed.
+
+This project defines **no product flavors**, so do not pass `--flavor`.
 
 for Android
 
 ```
-## development: flutter build apk -t lib/main.dart --flavor beta
+## APK (sideload / manual testing)
+flutter build apk --dart-define-from-file=env.json
 
-## staging: flutter build apk -t lib/main.dart --flavor prod
+## App Bundle (Play Store upload)
+flutter build appbundle --dart-define-from-file=env.json
 ```
 
 for IOS
 
 ```
-## development flutter build ios -t lib/main.dart --flavor beta
+## build only
+flutter build ios --dart-define-from-file=env.json
 
-## staging: flutter build ios -t lib/main.dart --flavor prod
+## signed archive for App Store Connect
+flutter build ipa --dart-define-from-file=env.json
 ```
 
 ### resources
       * All resources (images, fonts, videos, ...) must be placed in the assets class
+
+### Environment configuration
+
+`API_HOST` and `API_KEY` are supplied at build time via `--dart-define-from-file`,
+so they are read with `String.fromEnvironment` and never committed.
+
+1. Copy the template and fill in the real values:
+
+```
+cp env.example.json env.json
+```
+
+`env.json` is gitignored. `API_KEY` must match the shared secret the API expects
+on `/graphql`; without it every request comes back 401.
+
+2. Pass the file on every run/build:
+
+```
+flutter run --dart-define-from-file=env.json
+
+flutter build apk --dart-define-from-file=env.json
+flutter build ios --dart-define-from-file=env.json
+```
+
+The checked-in VS Code launch configurations already pass this flag. In
+Android Studio / IntelliJ, the flag lives in the run configuration's
+**Additional run args**.
+
+> Omitting the flag leaves both values empty. In debug an assertion in
+> `setupExternals` catches it; in release builds assertions are stripped, so the
+> app ships with an empty host and key and fails at runtime instead.
 
 ### Getting started
 Get dependencies and generate necessary files.
